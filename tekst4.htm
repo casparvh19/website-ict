@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Les 4</title>
+<link rel=stylesheet href="stijl.css" type="text/css">
+</head>
+<body>
+<h2>
+Les 4: het programmeren van de Dramco Uno
+</h2>
+<p>
+Eerst en vooral kregen we van de prof uitleg over het programmeren via Arduino, om erna alles zelf
+te kunnen toepassen.
+Als eerste programmeerden Twe de knipperende lampjes van de Dramco Uno.
+Erna zorgen we dat het kipperende lampje bleef branden van zodra we onze vinger op de lichtsensor
+legden. Als laatste betrokken we de temperatursensor bij one programmeertaal.
+Ten slotte haalden we alle data op van de verschillende sensoren via The Things Network.
+<br></br>
+We hebben een code geschreven om de dramco te laten knipperen als de temperatuur lager is dan 6 graden Celcius.
+Zo kan men de dramco uno gebruiken om in de frigo te leggen thuis of op kot om te kijken dat de temperatuur niet stijgt.
+</p>
+
+<pre>
+		 #include <Dramco-UNO.h>
+
+LoraParam DevEUI = "70B3D57ED005AB5E";
+LoraParam AppKey = "0000000000000000";
+
+void setup() {
+    DramcoUno.begin(DevEUI, AppKey);
+}
+
+void loop() {
+ int temp = readTemperature();
+if temp<=6 ;
+  DramcoUno.blink();
+  DramcoUno.addTemperature();
+else 
+  DramcoUno.delay(60000);
+ 
+		</pre>
+</body>
+</html>

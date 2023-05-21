@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Inschrijving boerenkamp KLJ te Boom</title>
+	</head>
+	
+	<body>
+		
+		<form action="toon_waarden_post.php" method="post" >
+
+        	<p>Voornaam : <input type="text" name="voornaam" /></p>
+        	<!-- je vindt na submit de voornaam terug in $_POST['voornaam'] -->
+        	
+			<p>Achternaam : <input type="text" name="achternaam" /></p>
+			<p>Straat + nummer : <input type="text" name="straat + nummer" /></p>
+			<p>Gemeente + postcode : <input type="text" name="gemeente + postcode" /></p>
+			<p>Telefoonnummer : <input type="text" name="telefoonnummer" /></p>
+			
+			
+			<p> Heeft uw kind allergieën? : </p>
+			<p><input type= "radio" name= "aller" value="ja" /> ja</p>
+			<p><input type= "radio" name= "aller" value="nee" /> nee</p>
+			<p>Welke? : <input type="text" name="allergieën" /></p>
+			
+			<p> Lid van KLJ? : </p>
+			<p><input type= "radio" name= "lid" value="Ja" /> Ja</p>
+			<p><input type= "radio" name= "lid" value="Nee" /> Nee</p>
+			
+			
+			
+			
+			
+			<p>Einde : <input type="submit" name="verzend" value="Verzend formulier" /></p>
+        
+        </form>
+		
+				
+		
+	
+	</body>	
+	
+</html>
